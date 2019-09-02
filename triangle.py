@@ -11,8 +11,6 @@ def classifyTriangle(a,b,c):
         If no pair of  sides are equal, return 'Scalene'
         If not a valid triangle, then return 'NotATriangle'
         If the sum of any two sides equals the squate of the third side, then return 'Right'
-        
-        
     """
     # Note: This code is completely bogus but demonstrates a few features of python
     if (a + b <= c or a + c <= b or b + c <= a):
