@@ -15,7 +15,7 @@ def classifyTriangle(a,b,c):
     # Note: This code is completely bogus but demonstrates a few features of python
     if (a + b <= c or a + c <= b or b + c <= a):
         return 'NotATriangle'
-    elif (round(a**2 + b**2  - c**2, 1) == 0 or round(a**2 + c**2 - b**2, 1) == 0 or round(c**2 + b**2 - a**2, 2) == 1):
+    elif (round(a**2 + b**2  - c**2, 1) == 0 or round(a**2 + c**2 - b**2, 1) == 0 or round(c**2 + b**2 - a**2, 1) == 0):
         return 'Right'
     elif a == b == c:
         return 'Equilateral'
