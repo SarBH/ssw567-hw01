@@ -13,7 +13,7 @@ def classifyTriangle(a,b,c):
         If the sum of any two sides equals the squate of the third side, then return 'Right'
     """
     # Note: This code is completely bogus but demonstrates a few features of python
-    if (a + b <= c or a + c <= b or b + c <= a):
+    if (a + b <= c or a + c <= b or b + c <= a) or (a or b or c)<0:
         return 'NotATriangle'
     elif (round(a**2 + b**2  - c**2, 1) == 0 or round(a**2 + c**2 - b**2, 1) == 0 or round(c**2 + b**2 - a**2, 1) == 0):
         return 'Right'
@@ -60,6 +60,7 @@ class TestTriangles(unittest.TestCase):
         self.assertNotEqual(classifyTriangle(1,1,1),'NotATriangle')
         self.assertEqual(classifyTriangle(25,10,11),'NotATriangle')
         self.assertEqual(classifyTriangle(34.5, 34.5, 135), 'NotATriangle')
+        self.assertEqual(classifyTriangle(34.5, 34.5, -35), 'NotATriangle')
 
 if __name__ == '__main__':
    unittest.main(verbosity=2)
